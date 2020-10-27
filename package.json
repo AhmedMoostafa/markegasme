@@ -1,0 +1,28 @@
+{
+  "name": "web-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": " nodemon src/app.js -e js,hbs,ejs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "ejs": "^3.1.5",
+    "express": "^4.16.4",
+    "express-session": "^1.17.1",
+    "hbs": "^4.0.1",
+    "mongodb": "^3.6.2",
+    "mongoose": "^5.10.9",
+    "request": "^2.88.2",
+    "require": "^2.4.20",
+    "validator": "^13.1.17"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
