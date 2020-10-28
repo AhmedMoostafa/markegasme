@@ -4,20 +4,25 @@ const MSG = require('../models/msg');
 /* const tr = require('../tz'); */
 const router = new express.Router();
 router.get('', async (req, res) => {
-    let User = global.globalString;
+    const { cookies } = req;
+    console.log(cookies)
+    let User = cookies.dev;
     res.render('index', { User });
 })
 router.post('', async (req, res) => {
 
 
     if (req.body.user === 'devWork@markegasm.com' && req.body.password === 'markegasmmarktingcc09876ns') {
-
-        global.globalString = 'admin';
+        res.cookie('dev', 'admin', { maxAge: 10000 });
     }
-    res.render('index', { User: global.globalString })
+    res.redirect('/');
 })
 router.get('/loginitjavasciptnodeuser', (req, res) => {
     res.render('login');
+})
+router.get('/logout', (req, res) => {
+    res.clearCookie('dev')
+    res.redirect('/');
 })
 
 router.post('/request', async (req, res) => {

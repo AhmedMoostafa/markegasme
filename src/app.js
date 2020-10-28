@@ -10,10 +10,12 @@ const app = express();
 const expressSession=require('express-session');
 const Request = require('./models/request');
 const MSG = require('./models/msg');
+const cookieParser=require('cookie-parser');
 require('./db/mongodb');
 app.use(express.urlencoded({ extended: false }))
 
 app.use(expressSession({secret:'hashahmed',saveUninitialized:true,resave:false}))
+app.use(cookieParser());
 const pathd = path.join(__dirname, '../public')
 const pathd2 = path.join(__dirname, '../src')
 const viewsPath = path.join(__dirname, '../templates/views');

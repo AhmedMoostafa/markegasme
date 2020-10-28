@@ -78,7 +78,7 @@
                     <a class="nav-link page-scroll" href="#request">Request</a>
                 </li>
             
-             <% if (typeof User !="undefined") { %>
+           <!--   <% if (typeof User !="undefined") { %>
         
                 <li class="nav-item">
                     <a class="nav-link page-scroll" href='/new'>add</a>
@@ -90,7 +90,7 @@
              <% } %>
              <li class="nav-item">
                 <a class="nav-link page-scroll" href='/show'>posts</a>
-            </li>
+            </li> -->
                 <!-- Dropdown Menu -->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle page-scroll" href="#about" id="navbarDropdown" role="button"
@@ -103,6 +103,21 @@
                                 Policy</span></a>
                     </div>
                 </li>
+               <% if (typeof User !="undefined") { %>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle page-scroll" id="navbarDropdown" role="button"
+                        aria-haspopup="true" aria-expanded="false">Admin</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/new"><span class="item-text">Add
+                                </span></a>
+                        <div class="dropdown-items-divide-hr"></div>
+                        <a class="dropdown-item" href="/show"><span class="item-text">posts
+                                </span></a>
+                                <div class="dropdown-items-divide-hr"></div>
+                        <a class="dropdown-item" href="/logout"><span class="item-text">Logout </span></a>
+                    </div>
+                </li>
+               <% } %>
                 <!-- end of dropdown menu -->
 
                 <li class="nav-item">
