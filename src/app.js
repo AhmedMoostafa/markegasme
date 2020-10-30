@@ -34,7 +34,7 @@ app.set('views', viewsPath);
 app.use(rout)
 app.use(blog)
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3002;
 
 app.listen(port, () => {
 
