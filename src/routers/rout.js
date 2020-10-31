@@ -5,7 +5,6 @@ const MSG = require('../models/msg');
 const router = new express.Router();
 router.get('', async (req, res) => {
     const { cookies } = req;
-    console.log(cookies)
     let User = cookies.dev;
     res.render('index', { User });
 })
@@ -13,7 +12,7 @@ router.post('', async (req, res) => {
 
 
     if (req.body.user === 'devWork@markegasm.com' && req.body.password === 'markegasmmarktingcc09876ns') {
-        res.cookie('dev', 'admin', { maxAge: 10000 });
+        res.cookie('dev', 'admin', { maxAge: 1000*60 });
     }
     res.redirect('/');
 })
@@ -25,6 +24,9 @@ router.get('/logout', (req, res) => {
     res.redirect('/');
 })
 
+//********************* */
+
+//********************* */
 router.post('/request', async (req, res) => {
     let name = req.body.rname, email = req.body.remail, phone = req.body.rphone, package = req.body.Pricing;
     const obj = {

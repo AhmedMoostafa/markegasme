@@ -10,11 +10,8 @@ router.get('/new', (req, res) => {
     res.render('new')
 })
 router.get('/show', async (req, res) => {
-    let admin=undefined;
-    if(typeof global.globalString!=undefined)
-    {
-        admin=global.globalString;
-    }
+    const { cookies } = req;
+    let admin = cookies.dev;
     let posts = [];
     posts = await Post.find({}).sort({ createdAt: 'desc' })
     res.render('showAll', { posts ,admin})

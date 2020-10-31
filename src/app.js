@@ -35,7 +35,20 @@ app.use(rout)
 app.use(blog)
 
 const port = process.env.PORT || 3000;
+/* app.get('*',(req,res)=>{
+  res.redirect('/')
+}) */
+app.get('/test1', (req, res) => {
 
+  res.render('playGroundh')
+
+})
+app.get('/test', (req, res) => {
+
+  console.log(req.query);
+  res.send({ data: 'done' })
+
+})
 app.listen(port, () => {
 
   console.log('connect on port:' + port)
