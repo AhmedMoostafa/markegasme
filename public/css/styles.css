@@ -1024,7 +1024,11 @@ h2{
 	border-radius: 0.5rem;
 	vertical-align: top;
 }
-
+.site-logo{
+	width: 70px;
+    height: 70px;
+    border-radius: 5px;
+}
 .cards-2 .card .card-body {
 	padding: 2.5rem 2.75rem 1.875rem 2.5rem;
 }
@@ -1484,9 +1488,17 @@ h2{
 }
 
 .footer h4 {
-	margin-bottom: 1rem;
+	margin-bottom: 2rem;
 }
-
+.header-social-links{
+	margin-top: 40px;
+}
+.header-social-links svg{
+	color: #22bfd8;
+}
+.header-social-links .fa-stack-1x{
+	color:white;
+}
 .footer .list-unstyled .fas {
 	color: #00bfd8;
 	font-size: 0.5rem;
